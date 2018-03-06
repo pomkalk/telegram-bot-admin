@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bot admin demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="ui container">
+        <div class="ui borderless menu">
+            <div class="header item">
+                <i class="eye icon"></i>
+                Telegram Bot Admin
+            </div>
+        </div>
+        <div class="ui grid">
+            <div class="six wide column">
+                <div class="ui top attached borderless menu">
+                    <div class="header item">
+                        <i class="users icon"></i>
+                        Telegram Bot Users
+                    </div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <div class="ui divided animated list" id="users-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

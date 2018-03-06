@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node postinstall",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "bot",
@@ -16,9 +17,11 @@
   "author": "pomkalk",
   "license": "MIT",
   "dependencies": {
+    "D": "^1.0.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "node-telegram-bot-api": "^0.30.0",
+    "nodemon": "^1.17.1",
     "sequelize": "^4.35.2",
     "socket.io": "^2.0.4",
     "sqlite3": "^3.1.13"
