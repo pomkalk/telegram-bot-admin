@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node postinstall",
     "start": "node index.js",
-    "migrate": "node migrate.js",
+    "migrate": "node migration.js",
     "dev": "nodemon index.js"
   },
   "keywords": [
