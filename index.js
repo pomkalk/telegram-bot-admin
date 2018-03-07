@@ -46,6 +46,18 @@ io.on('connect', (socket)=>{
     User.findAll().then((users)=>{
         io.emit('users update', users.map(i=>i.toJSON()));
     });
+
+    socket.on('broadcast', (data)=>{
+        User.findAll().then((users)=>{
+            users.forEach((user)=>{
+                bot.sendMessage(user.id, data.message);
+                io.emit('log', {
+                    from: 'BOT>BROADCAST',
+                    msg: data.message
+                });
+            });
+        });
+    });
 });
 
 http.listen(cfg.server.port, ()=>{

@@ -18,8 +18,12 @@
                 <i class="eye icon"></i>
                 Telegram Bot Admin
             </div>
+            <div class="link item" id="show-modal">
+                <i class="envelope outline age icon"></i>
+                Send message
+            </div>
         </div>
-        <div class="ui grid">
+        <div class="ui stackable grid">
             <div class="six wide column">
                 <div class="ui top attached borderless menu">
                     <div class="header item">
@@ -46,6 +50,22 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="ui tiny modal" id="modal-window">
+        <div class="header">Send message telegram bot users</div>
+        <div class="content">
+            <div class="ui form">
+                <div class="field">
+                    <textarea id="message-box" rows="2"></textarea>
+                </div>
+            </div>
+            
+        </div>
+        <div class="actions">
+            <div class="ui approve green button">Send</div>
+            <div class="ui cancel button">Cancel</div>
         </div>
     </div>
 </body>
