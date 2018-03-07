@@ -11,3 +11,16 @@ socket.on('users update', (users)=>{
         list.append(item);
     });
 });
+
+socket.on('log', (data)=>{
+    console.log(data);
+    var list = $('#log');
+    var item = $('<div>').addClass('item');
+    var icon = $('<i>').addClass('minus icon');
+    var content = $('<div>').addClass('content');
+    var header = $('<div>').addClass('header').html('from: '+data.from);
+    var desc = $('<div>').addClass('description').html(data.msg);
+    item.append(icon).append(content);
+    content.append(header).append(desc);
+    list.append(item);
+});

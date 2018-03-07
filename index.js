@@ -31,6 +31,14 @@ bot.onText(/\/start/, (msg)=>{
    });
 });
 
+bot.on('message', (msg)=>{
+    console.log(msg);
+    io.emit('log', {
+        from: msg.from.username,
+        msg: msg.text
+    });
+});
+
 app.use(express.static(__dirname+'/public'));
 
 io.on('connect', (socket)=>{
